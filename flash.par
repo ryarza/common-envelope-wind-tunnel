@@ -1,0 +1,91 @@
+#	Runtime parameters for the rigid solid body problem 
+
+#	Parameters for initial model
+
+#		Ambient pressure and density and inflow velocity.
+sim_rhoAmbient	= 1.0
+
+# define the domain
+xmin		= -7.0
+xmax		= 4.0
+ymin		= -3.5
+ymax		= 3.5
+zmin            = -3.5
+zmax            = 3.5
+
+# WIND
+sim_gamma_structure = 1.66667  # structure of polytropic envelope 
+gamma = 1.66667           # fluid compressibility
+sim_epsilon_grad = 1.0    # density gradient 
+
+#point mass
+ptmass = 7491444.7700725766  # 1/(2G) ... do not change!! 
+ptxpos = 0.0
+ptypos = 0.0
+ptzpos = 0.0
+gravsoft = 0.02
+
+# CENTRAL BC
+sim_radius = 0.05
+sim_xCtr  = 0.0
+sim_yCtr  = 0.0
+sim_zCtr  = 0.0
+sim_bctype = 2    # 2 = sink, 1 = reflecting 
+sim_avgs = .true.
+sim_avgs_radius = 2.d0
+sim_avgs_mult = 1.d0
+sim_presfactor = 1.d-3
+
+# Binary Parameters
+sim_q = 0.1  #mass ratio
+
+#	Computational volume parameters
+
+#		Grid geometry
+
+geometry = "cartesian"
+
+#		Size of computational volume
+
+Nblockx		= 11
+Nblocky		= 7
+Nblockz         = 7
+
+
+#		Boundary conditions
+xl_boundary_type = "user"
+xr_boundary_type = "diode"
+
+yl_boundary_type = "user"
+yr_boundary_type = "diode"
+
+zl_boundary_type = "diode"
+zr_boundary_type = "diode"
+
+#	Simulation (grid, time, I/O) parameters
+cfl		= 0.8
+lrefine_min     = 1
+lrefine_max	= 6
+sim_max_ref_rad = 1.5 # factor times sim_radius
+
+gr_lrefineMaxRedDoByLogR = .true.
+gr_lrefineMaxRedRadiusFact = 0.3
+
+#refine_var_1 = "pres"
+#refine_var_2 = "bdry"
+#refine_var_3 = "dens"
+refine_var_1  = "eint"
+
+basenm          = "acc_"
+#restart         = .true.
+#checkpointFileNumber = 24
+#checkpointFileIntervalStep          = 50
+checkpointFileIntervalTime          = 1.0
+plotFileIntervalTime          = 100000
+nend            = 100000000
+tmax            = 50
+eintSwitch     = 1.e-4
+#ref		= 1
+gr_sanitizeVerbosity = 1
+
+
