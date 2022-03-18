@@ -1,0 +1,10 @@
+#	Configuration file for the gravitational physics module:
+#	gravitational field caused by a point mass of mass (ptmass) at
+#       position (ptxpos, ptypos, ptzpos) with additional contribution from
+#       a 1/y^2 background gravitational field
+
+PARAMETER ptmass       REAL    10000.
+PARAMETER ptxpos       REAL    1.
+PARAMETER ptypos       REAL    -10.
+PARAMETER ptzpos       REAL    0.
+PARAMETER gravsoft     REAL    0.001
