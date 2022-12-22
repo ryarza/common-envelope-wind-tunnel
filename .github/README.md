@@ -1,4 +1,4 @@
-<a href="codeberg.org">
+<a href="https://codeberg.org/ryarza/common-envelope-wind-tunnel">
     <img alt="Get it on Codeberg" src="https://get-it-on.codeberg.org/get-it-on-white-on-black.svg" height="60">
 </a>
 
